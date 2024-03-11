@@ -1,0 +1,111 @@
+.dice {
+  width: 200px;
+  height: 200px;
+  perspective: 50000px;
+  transform-style: preserve-3d;
+  transition: transform 1800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  transform: rotateX(135deg) rotateY(150deg) rotateZ(180deg);
+}
+
+.dice .side {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border: 1px solid rgba(202, 172, 124, 0.9);
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  /* border-radius: 8px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('../../assets/texture/wood-texture.png');
+}
+img {
+  height: 95%;
+  /* object-fit: fill; */
+}
+.dice .side:nth-child(1) {
+  transform: rotateX(0deg) translateZ(100px);
+}
+.dice .side:nth-child(2) {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.dice .side:nth-child(3) {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.dice .side:nth-child(4) {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.dice .side:nth-child(5) {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+.dice .side:nth-child(6) {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.roll-1 {
+  transform: rotateX(225deg) rotateY(180deg) rotateZ(150deg);
+}
+.roll-2 {
+  transform: rotateX(675deg) rotateY(660deg) rotateZ(630deg);
+}
+
+.roll-3 {
+  transform: rotateX(1125deg) rotateY(900deg) rotateZ(1110deg);
+}
+.roll-4 {
+  transform: rotateX(1395deg) rotateY(1200deg) rotateZ(1530deg);
+}
+.roll-5 {
+  transform: rotateX(1575deg) rotateY(1410deg) rotateZ(1800deg);
+}
+.roll-6 {
+  transform: rotateX(1935deg) rotateY(1950deg) rotateZ(1980deg);
+}
+@keyframes roll {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(1080deg) rotateY(720deg);
+  }
+}
+
+.dice.roll {
+  animation: roll 3s ease-in-out forwards;
+}
+
+@media (max-width: 1000px) {
+  .dice {
+    width: 100px;
+    height: 100px;
+  }
+
+  .dice .side {
+    width: 100px;
+    height: 100px;
+  }
+  .dice .side:nth-child(1) {
+    transform: rotateX(0deg) translateZ(50px);
+  }
+  .dice .side:nth-child(2) {
+    transform: rotateY(90deg) translateZ(50px);
+  }
+  .dice .side:nth-child(3) {
+    transform: rotateY(180deg) translateZ(50px);
+  }
+  .dice .side:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(50px);
+  }
+  .dice .side:nth-child(5) {
+    transform: rotateX(-90deg) translateZ(50px);
+  }
+  .dice .side:nth-child(6) {
+    transform: rotateX(90deg) translateZ(50px);
+  }
+}

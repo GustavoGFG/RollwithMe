@@ -1,0 +1,35 @@
+.container {
+  background-color: lightgray;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 100px;
+}
+.dice-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 800px;
+  max-width: 100%;
+  /* gap: 200px; */
+  height: calc(100% - 160px);
+}
+
+.btn {
+  background-image: url('./assets/texture/wood-texture.png'); /* Specify the path to your wood image */
+  background-size: cover; /* Ensure the image covers the entire button */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  border: none; /* Remove border */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+  color: #210100; /* Hide the text */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  /* Add shadow to create depth */
+}

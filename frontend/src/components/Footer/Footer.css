@@ -1,0 +1,12 @@
+footer {
+  height: 40px;
+  background-color: #2a0600;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+}
+a {
+  text-decoration: none;
+  color: #ff9c5a;
+}
